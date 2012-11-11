@@ -1,0 +1,13 @@
+nvcoretemp is a very simple command-line utility I wrote because I
+wanted an IRC bot to report the core temperature of my NVIDIA graphics
+card by capturing some command's output.
+
+It uses libxnvctrl to query the NV_CTRL_GPU_CORE_TEMPERATURE attribute
+for the current X display given in DISPLAY, or :0 as a fallback.
+
+There are no command line options besides --batch (or -b, for short),
+which limits the output to just the temperature value and a newline.
+Errors are written to stderr.
+
+To build it, you will obviously need X11 (Xlib) and libxnvctrl. To run
+it, you will need an X display running NVIDIA's proprietary stack.
